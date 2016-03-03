@@ -1,0 +1,20 @@
+<h2>{{ strain.name }}</h2>
+<h5>{{ strain.review_set.count }} reviews ({{ strain.average_rating | floatformat }} average rating)</h5>
+
+<h3>Recent reviews</h3>
+
+{% if strain.review_set.all %}
+<div>
+    {% for review in strain.review_set.all %}
+    <div>
+        <em>{{ review.comment }}</em>
+        <h6>Rated {{ review.rating }} of 5 by {{ review.user_name }}</h6>
+        <h5><a href="{% url 'strain_reviews:strain_review_detail' strain_review.id %}">
+        Read more
+        </a></h5>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No reviews for this strain yet</p>
+{% endif %}
