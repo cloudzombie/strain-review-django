@@ -25,6 +25,7 @@ def strain_detail(request, strain_id):
     form = ReviewForm()
     return render(request, 'strain_review/strain_detail.html', {'strain': strain, 'form': form})
 
+@login_required
 def add_strain_review(request, strain_id):
     strain = get_object_or_404(Strain, pk=strain_id)
     form = ReviewForm(request.POST)
@@ -32,6 +33,7 @@ def add_strain_review(request, strain_id):
         rating = form.cleaned_data['rating']
         comment = form.cleaned_data['comment']
         user_name = form.cleaned_data['user_name']
+        user_name = request.user.username
         review = Review()
         review.strain = strain
         review.user_name = user_name
