@@ -1,6 +1,9 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+# from django.contrib.auth.models import User
+# from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from .models import Review, Strain
 from .forms import ReviewForm
 import datetime
