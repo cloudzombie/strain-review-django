@@ -129,3 +129,7 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/strain_review/review/user'
 
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
+REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
+
+
