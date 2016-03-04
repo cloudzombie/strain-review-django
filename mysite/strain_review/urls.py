@@ -7,7 +7,7 @@ urlpatterns = [
     # ex: /review/5/
     url(r'^strain_review/(?P<review_id>[0-9]+)/$', views.strain_review_detail, name='strain_review_detail'),
     # ex: /wine/
-    url(r'^strain$', views.strain_list, name='strain_list'),
+    url(r'^strain/$', views.strain_list, name='strain_list'),
     # ex: /wine/5/
     url(r'^strain/(?P<strain_id>[0-9]+)/$', views.strain_detail, name='strain_detail'),
     url(r'^strain/(?P<strain_id>[0-9]+)/add_review/$', views.add_strain_review, name='add_strain_review'),

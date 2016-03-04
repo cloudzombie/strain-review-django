@@ -1,0 +1,17 @@
+<h2>Strain list</h2>
+
+{% if strain_list %}
+<div>
+    {% for strain in strain_list %}
+    <div>
+        <h4><a href="{% url 'strain_review:strain_detail' strain.id %}">
+        {{ strain.name }}
+        </a></h4>
+        <h5>{{ strain.review_set.count }} reviews</h5>
+        <h5>{{ strain.average_rating | floatformat }} average rating</h5>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+    <p>No strains are available.</p>
+{% endif %}
