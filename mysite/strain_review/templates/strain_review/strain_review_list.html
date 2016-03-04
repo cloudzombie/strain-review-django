@@ -1,4 +1,4 @@
-{% extends 'strain_review/base.html' %}
+{% extends 'base.html' %}
 
 {% block title %}
 <h2>Latest reviews</h2>
@@ -10,9 +10,9 @@
     {% for review in latest_review_list %}
     <div>
         <h4><a href="{% url 'strain_review:strain_review_detail' review.id %}">
-        {{review.strain.name }}
+        {{ review.strain.name }}
         </a></h4>
-        <h6>rated {{ review.rating }} of 5 by {{ review.user_name }}</h6>
+        <h6>rated {{ review.rating }} of 5 by <a href="{% url 'strain_review:user_review_list' review.user_name %}" >{{ review.user_name }}</a></h6>
         <p>{{ review.comment }}</p>
     </div>
     {% endfor %}
