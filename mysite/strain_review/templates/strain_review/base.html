@@ -1,11 +1,17 @@
-<div>
-    <nav>
-        <div>
-            <a href="{% url 'strain_review:strain_review_list' %}">Strain Review</a>
+{% load bootstrap3 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block bootstrap3_content %}
+<div class="container">
+    <nav  class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'strain_review:strain_review_list' %}">Strain Review</a>
         </div>
-        <div id="navbar">
-            <ul>
-                <li><a href="{% url 'strain_review:strain_list' %}">Strain List</a></li>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'strain_review:strain_list' %}">Strain list</a></li>
                 <li><a href="{% url 'strain_review:strain_review_list' %}">Home</a></li>
             </ul>
         </div>
@@ -14,6 +20,9 @@
 
     <h1>{% block title %}(no title){% endblock %}</h1>
 
+    {% bootstrap_messages %}
 
     {% block content %}(no content){% endblock %}
 </div>
+
+{% endblock %}
