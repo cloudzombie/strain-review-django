@@ -1,3 +1,6 @@
+{% load static %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 {% load bootstrap3 %}
 
 {% bootstrap_css %}
@@ -20,6 +23,7 @@
             <li><a href="{% url 'auth:logout' %}">Logout</a></li>
             {% else %}
             <li><a href="{% url 'auth:login' %}">Login</a></li>
+            <li><a href="/accounts/register">Register</a></li>
             {% endif %}
             </ul>
         </div>
