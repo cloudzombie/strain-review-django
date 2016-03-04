@@ -9,7 +9,7 @@
     <div>
         <em>{{ review.comment }}</em>
         <h6>Rated {{ review.rating }} of 5 by {{ review.user_name }}</h6>
-        <h5><a href="{% url 'strain_reviews:strain_review_detail' strain_review.id %}">
+        <h5><a href="{% url 'strain_review:strain_review_detail' review.id %}">
         Read more
         </a></h5>
     </div>
@@ -18,3 +18,13 @@
 {% else %}
 <p>No reviews for this strain yet</p>
 {% endif %}
+
+<h3>Add your review</h3>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+<form action="{% url 'strain_review:add_strain_review' strain.id %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Add" />
+</form>

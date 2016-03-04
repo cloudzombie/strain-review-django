@@ -4,8 +4,8 @@
 <div>
     {% for review in latest_review_list %}
     <div>
-        <h4><a href="{% url 'strain_review:review_detail' review.id %}">
-        {{ review.strain.name }}
+        <h4><a href="{% url 'strain_review:strain_review_detail' review.id %}">
+        {{review.strain.name }}
         </a></h4>
         <h6>rated {{ review.rating }} of 5 by {{ review.user_name }}</h6>
         <p>{{ review.comment }}</p>
