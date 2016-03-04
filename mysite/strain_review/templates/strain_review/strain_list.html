@@ -1,5 +1,10 @@
-<h2>Strain list</h2>
+{% extends 'strain_review/base.html' %}
 
+{% block title %}
+<h2>Strain list</h2>
+{% endblock %}
+
+{% block content %}
 {% if strain_list %}
 <div>
     {% for strain in strain_list %}
@@ -15,3 +20,5 @@
 {% else %}
     <p>No strains are available.</p>
 {% endif %}
+{% endblock %}
+

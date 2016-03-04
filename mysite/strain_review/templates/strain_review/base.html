@@ -1,0 +1,19 @@
+<div>
+    <nav>
+        <div>
+            <a href="{% url 'strain_review:strain_review_list' %}">Strain Review</a>
+        </div>
+        <div id="navbar">
+            <ul>
+                <li><a href="{% url 'strain_review:strain_list' %}">Strain List</a></li>
+                <li><a href="{% url 'strain_review:strain_review_list' %}">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <h1>{% block title %}(no title){% endblock %}</h1>
+
+
+    {% block content %}(no content){% endblock %}
+</div>

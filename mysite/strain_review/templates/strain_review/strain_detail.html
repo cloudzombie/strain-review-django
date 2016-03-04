@@ -1,4 +1,10 @@
+{% extends 'strain_review/base.html' %}
+
+{% block title %}
 <h2>{{ strain.name }}</h2>
+{% endblock %}
+
+{% block content %}
 <h5>{{ strain.review_set.count }} reviews ({{ strain.average_rating | floatformat }} average rating)</h5>
 
 <h3>Recent reviews</h3>
@@ -28,3 +34,5 @@
     {{ form.as_p }}
     <input type="submit" value="Add" />
 </form>
+{% endblock %}
+
