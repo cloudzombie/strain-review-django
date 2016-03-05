@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 # from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from .models import Review, Strain
@@ -35,7 +35,7 @@ def add_strain_review(request, strain_id):
     if form.is_valid():
         rating = form.cleaned_data['rating']
         comment = form.cleaned_data['comment']
-        user_name = form.cleaned_data['user_name']
+        # user_name = form.cleaned_data['user_name']
         user_name = request.user.username
         review = Review()
         review.strain = strain
