@@ -3,5 +3,6 @@ django-bootstrap3==7.0.0
 django-jquery==1.9.1
 django-registration==2.0.4
 django-registration-redux==1.4
+gunicorn==19.4.5
 numpy==1.10.4
 psycopg2==2.6.1
