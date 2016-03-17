@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'trike',
         'USER': 'ivorybook',
         'PASSWORD': 'mypassword',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
@@ -135,3 +135,5 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
