@@ -25,7 +25,7 @@ SECRET_KEY = '+l11m5r)a1i*d_53^%7#ul07)-%t9ni)(hqd+e!)+l)h_sv#y_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://stark-everglades-35905.herokuapp.com/']
 
 
 # Application definition
