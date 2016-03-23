@@ -2,8 +2,11 @@ from django.conf.urls import url, include
 from . import views
 
 urlpatterns = [
+    # all patterns preceeded by /strain_review
     # ex: /
     url(r'^$', views.strain_review_list, name='strain_review_list'),
+    #piff app
+    url(r'^$', views.piff, name='piff'),
     # ex: /review/5/
     url(r'^strain_review/(?P<review_id>[0-9]+)/$', views.strain_review_detail, name='strain_review_detail'),
     # ex: /wine/

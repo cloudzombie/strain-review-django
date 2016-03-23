@@ -9,6 +9,9 @@ from .forms import ReviewForm
 import datetime
 
 # Create your views here.
+def piff(request):
+    return render(request, 'strain_review/piff.html')
+
 def strain_review_list(request):
     latest_review_list = Review.objects.order_by('-pub_date')[:9]
     context = {'latest_review_list':latest_review_list}
