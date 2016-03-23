@@ -9,7 +9,11 @@ html, body {
   width: 100%;
 }
 
-#main-header {
+body {
+  background: white url("images/pexels-photo.jpg");
+  background-size: cover;
+}
+/*#main-header {
   background: green;
   color: white;
 }
@@ -17,3 +21,4 @@ html, body {
 .navbar-brand {
   color: white;
 }
+*/

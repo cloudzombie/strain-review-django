@@ -10,8 +10,8 @@
 {% bootstrap_javascript %}
 
 {% block bootstrap3_content %}
-<div class="container">
-    <nav class="navbar navbar-default" id="main-header">
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse" id="main-header">
         <div class="navbar-header">
             <a class="navbar-brand" href="{% url 'strain_review:strain_review_list' %}">Strain Review</a>
         </div>
@@ -19,6 +19,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="{% url 'strain_review:strain_list' %}">Strain list</a></li>
                 <li><a href="{% url 'strain_review:strain_review_list' %}">Home</a></li>
+                <li><a href="#"><!-- <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></button> -->PIFF</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
         {% if user.is_authenticated %}
