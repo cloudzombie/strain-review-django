@@ -3,6 +3,7 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
           color: white;
+          font-family: 'Raleway', sans-serif;
 }
 html, body {
   height: 100%;
@@ -18,4 +19,6 @@ body {
 .review-list a {
   color: white;
 }
-
+.strain-list-star a {
+  color: white;
+}

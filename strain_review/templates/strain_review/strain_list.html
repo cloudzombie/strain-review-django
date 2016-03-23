@@ -8,7 +8,7 @@
 {% if strain_list %}
 <div>
     {% for strain in strain_list %}
-    <div>
+    <div class="strain-list-star">
         <h4><a href="{% url 'strain_review:strain_detail' strain.id %}">
         {{ strain.name }}
         </a></h4>
