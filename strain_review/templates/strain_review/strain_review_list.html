@@ -8,7 +8,7 @@
 
 {% block content %}
 {% if latest_review_list %}
-<div>
+<div class="review-list">
     {% for review in latest_review_list %}
     <div>
         <h4><a href="{% url 'strain_review:strain_review_detail' review.id %}">

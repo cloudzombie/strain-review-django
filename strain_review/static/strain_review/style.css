@@ -4,26 +4,18 @@
           box-sizing: border-box;
           color: white;
 }
-
 html, body {
   height: 100%;
   width: 100%;
 }
-
 body {
   background: white url("images/pexels-photo.jpg");
   background-size: cover;
 }
-
-/*h2 {
+#main-header a {
   color: white;
-}*/
-/*#main-header {
-  background: green;
+}
+.review-list a {
   color: white;
 }
 
-.navbar-brand {
-  color: white;
-}
-*/
