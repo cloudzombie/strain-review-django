@@ -6,7 +6,7 @@ urlpatterns = [
     # ex: /
     url(r'^$', views.strain_review_list, name='strain_review_list'),
     #piff app
-    url(r'^piff/$', views.piff, name='piff'),
+    url(r'^index/$', views.index, name='index'),
     # ex: /review/5/
     url(r'^strain_review/(?P<review_id>[0-9]+)/$', views.strain_review_detail, name='strain_review_detail'),
     # ex: /wine/

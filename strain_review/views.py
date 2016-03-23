@@ -1,3 +1,4 @@
+from django.shortcuts import render_to_response
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -9,8 +10,8 @@ from .forms import ReviewForm
 import datetime
 
 # Create your views here.
-def piff(request):
-    return render(request, 'strain_review/piff.html')
+def index(request):
+    return render(request, 'strain_review/index.html')
 
 def strain_review_list(request):
     latest_review_list = Review.objects.order_by('-pub_date')[:9]
